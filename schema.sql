@@ -1,4 +1,3 @@
-
 CREATE DATABASE IF NOT EXISTS zomato_food_delivery;
 
 USE zomato_food_delivery;
@@ -9,6 +8,7 @@ CREATE TABLE Customers (
     name VARCHAR(100) NOT NULL,
     city VARCHAR(50) NOT NULL
 );
+DESCRIBE Customers;
 
 -- 2. Restaurants Table
 CREATE TABLE Restaurants (
@@ -17,6 +17,7 @@ CREATE TABLE Restaurants (
     city VARCHAR(50) NOT NULL,
     rating DECIMAL(2,1) NOT NULL
 );
+DESCRIBE Restaurants;
 
 -- 3. Orders Table
 CREATE TABLE Orders (
@@ -32,6 +33,7 @@ CREATE TABLE Orders (
     FOREIGN KEY (restaurant_id)
         REFERENCES Restaurants(restaurant_id)
 );
+DESCRIBE Orders;
 
 -- 4. Deliveries Table
 CREATE TABLE Deliveries (
@@ -43,3 +45,29 @@ CREATE TABLE Deliveries (
     FOREIGN KEY (order_id)
         REFERENCES Orders(order_id)
 );
+DESCRIBE Deliveries;
+
+-- 5. Products Table
+CREATE TABLE Products (
+    product_id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(100) NOT NULL,
+    category VARCHAR(50) NOT NULL,
+    price DECIMAL(10,2) NOT NULL
+);
+DESCRIBE Products;
+
+-- 6. Order_Items Table
+CREATE TABLE Order_Items (
+    order_item_id INT PRIMARY KEY AUTO_INCREMENT,
+    order_id INT NOT NULL,
+    product_id INT NOT NULL,
+    quantity INT NOT NULL,
+    item_price DECIMAL(10,2) NOT NULL,
+
+    FOREIGN KEY (order_id)
+        REFERENCES Orders(order_id),
+
+    FOREIGN KEY (product_id)
+        REFERENCES Products(product_id)
+);
+DESCRIBE Order_Items;
