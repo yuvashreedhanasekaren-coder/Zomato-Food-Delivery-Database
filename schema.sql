@@ -71,3 +71,20 @@ CREATE TABLE Order_Items (
         REFERENCES Products(product_id)
 );
 DESCRIBE Order_Items;
+
+INSERT INTO Customers (name, city)
+VALUES
+('Murugan', 'Bangalore'),
+('Shiva', 'Chennai'),
+('Malathy','Vellore'),
+('Dhanasekaren','Chennai'),
+('Yuvashree D', 'Bangalore'),
+('Santhosh', 'Tiruvannamalai'),
+('Nandha', 'Tirupattur'),
+('Susil', 'Vellore'),
+('Arul kumaren', 'Chennai'),
+('Hemavathi S', 'Hosur'),
+('Vijay', 'Salem'),
+('Avanthika','Bangalore');
+
+SELECT * FROM Customers;
