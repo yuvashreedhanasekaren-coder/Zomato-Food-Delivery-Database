@@ -108,3 +108,31 @@ VALUES
 (14, 12, 2, 170.00),
 (15, 3, 2, 180.00),
 (15, 14, 1, 100.00);
+
+SELECT * FROM Order_Items;
+
+INSERT INTO Deliveries
+(order_id, delivery_time, delivery_partner)
+VALUES
+(1, 30, 'Ravi'),
+(2, 25, 'Kumar'),
+(3, 40, 'Arun'),
+(4, 35, 'Suresh'),
+(5, 28, 'Prakash'),
+(6, 45, 'Manoj'),
+(7, 32, 'Vijay'),
+(8, 38, 'Dinesh'),
+(9, 22, 'Ravi'),
+(10, 30, 'Karthik'),
+(11, 42, 'Kumar'),
+(12, 27, 'Arun'),
+(13, 35, 'Suresh'),
+(14, 50, 'Prakash'),
+(15, 33, 'Manoj'),
+(16, 29, 'Vijay'),
+(17, 40, 'Dinesh'),
+(18, 26, 'Karthik'),
+(19, 31, 'Ravi'),
+(20, 36, 'Kumar');
+
+SELECT * FROM Deliveries;
