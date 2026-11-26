@@ -1,7 +1,26 @@
 -- Zomato Food Delivery Database
 -- SQL Analysis Queries
 
+
 -- 1. Basic SELECT Queries
+-- Display all customer records
+SELECT * FROM Customers;
+
+-- Display all restaurant records
+SELECT * FROM Restaurants;
+
+-- Display all order records
+SELECT * FROM Orders;
+
+-- Display all delivery records
+SELECT * FROM Deliveries;
+
+-- Display all product records
+SELECT * FROM Products;
+
+-- Display all order item records
+SELECT * FROM Order_Items;
+
 
 -- 2. Database Record Summary
 -- Count total records in all 6 tables
